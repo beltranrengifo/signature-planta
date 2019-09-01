@@ -22,9 +22,6 @@
         <instructions-block
           type="Gmail"
           :content="instructions.gmail"/>
-        <instructions-block
-          type="iOS"
-          :content="instructions.ios"/>
       </div>
     </section>
     <section class="m-t-48">
@@ -95,8 +92,7 @@ export default {
   #app {
     background: $--color-grey;
     min-height: 100vh;
-    padding: 0 48px 48px;
-    box-sizing: border-box;
+    padding-bottom: 48px;
   }
   .app-width {
     width: 800px;
@@ -117,8 +113,5 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /deep/ h1 {
-      font-size: 16px;
-    }
   }
 </style>

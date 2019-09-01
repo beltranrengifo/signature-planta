@@ -19,9 +19,9 @@
       </li>
       <li
         class="instructions__item"
-        v-for="image in content.images"
-        :key="image">
-        <img :src="require(`@/assets/images/${image}`)" alt="image">
+        v-for="item in content.images"
+        :key="item"
+        v-html="item">
       </li>
     </ol>
   </div>
@@ -40,7 +40,7 @@ export default {
       type: String
     },
     content: {
-      type: Object,
+      type: Array,
       required: true
     }
   },

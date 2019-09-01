@@ -22,9 +22,6 @@
         <instructions-block
           type="Gmail"
           :content="instructions.gmail"/>
-        <instructions-block
-          type="iOS"
-          :content="instructions.ios"/>
       </div>
     </section>
     <section class="m-t-48">

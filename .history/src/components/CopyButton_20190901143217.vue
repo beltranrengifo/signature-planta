@@ -58,9 +58,11 @@ export default {
       background: $--color-info;
     }
     &.active {
-      color: $--color-white;
       border-color: $--color-success;
       background: $--color-success;
+      &:hover {
+        color: $--color-white;
+      }
     }
   }
 </style>

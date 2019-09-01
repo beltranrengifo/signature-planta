@@ -1,7 +1,7 @@
 <template>
   <div
     :class="{'is-folded': folded}"
-    class="instructions__block">
+    class="instructions__block app-container app-width">
     <h3
       class="instructions__title"
       @click="handleAccordion">
@@ -13,15 +13,9 @@
     <ol class="instructions__list">
       <li
         class="instructions__item"
-        v-for="item in content.content"
-        :key="item"
-        v-html="item">
-      </li>
-      <li
-        class="instructions__item"
-        v-for="image in content.images"
-        :key="image">
-        <img :src="require(`@/assets/images/${image}`)" alt="image">
+        v-for="item in content"
+        :key="item">
+        {{ item }}
       </li>
     </ol>
   </div>
@@ -40,7 +34,7 @@ export default {
       type: String
     },
     content: {
-      type: Object,
+      type: Array,
       required: true
     }
   },
@@ -54,45 +48,30 @@ export default {
 
 <style lang="scss" scoped>
   .instructions {
+    &__block {
+      overflow: hidden;
+      padding: 24px;
+      box-sizing: border-box;
+      &.is-folded {
+        ol {
+          height: 0;
+        }
+      }
+    }
     &__title {
       border-bottom: 1px solid $--color-grey-dark;
-      padding-bottom: 4px;
+      padding-bottom: 12px;
       color: $--color-grey-dark;
       display: flex;
       justify-content: space-between;
       padding-right: 16px;
       padding-left: 16px;
-      cursor: pointer;
-      transition: color .2s;
-      margin-bottom: 4px;
-      &:hover {
-        color: black;
-      }
     }
     &__list {
       overflow: hidden;
     }
     &__item {
       line-height: 1.75;
-    }
-    &__block {
-      overflow: hidden;
-      padding: 24px 24px 0;
-      box-sizing: border-box;
-      &.is-folded {
-        ol {
-          height: 0;
-          margin: 0;
-        }
-      }
-      &:not(.is-folded) {
-        .instructions__title {
-          color: black;
-        }
-      }
-      &:last-child {
-        padding-bottom: 32px;
-      }
     }
   }
   .accordion-trigger {

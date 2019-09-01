@@ -61,6 +61,9 @@ export default {
       color: $--color-white;
       border-color: $--color-success;
       background: $--color-success;
+      &:hover {
+        // color: $--color-white;
+      }
     }
   }
 </style>

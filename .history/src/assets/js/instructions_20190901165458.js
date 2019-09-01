@@ -12,7 +12,7 @@ export default {
     content: [
       'Completa la firma y copia el resultado usando el botón de copiar',
       'Ajustes > Correo > Firma',
-      'Pegar el contenido copiado previamente y después pulsar en deshacer para evitar el formateo automático.'
+      'Pegar el contenido copiado previamente y después pulsar en deshacer para evitar el formateo automático.',
     ],
     images: [
       'ios-screen.jpg'

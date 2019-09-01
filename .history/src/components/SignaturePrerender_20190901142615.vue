@@ -76,9 +76,6 @@ export default {
   align-self: center;
   h4 {
     font-weight: 100;
-    font-size: 14px;
-    letter-spacing: .5px;
-    color: $--color-grey-dark;
   }
 }
 </style>

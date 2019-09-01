@@ -1,37 +1,13 @@
 <template>
   <div id="app">
-    <header id="main-header">
+    <section>
       <logo
        :logo="logo"
        alt="Grupo La Musa"/>
-       <title-component
-        title="Generador de firmas"
-        tag="h1"/>
-    </header>
-    <section>
-      <title-component
-        class="app-width preview-header"
-        title="Instrucciones"/>
-      <div class="app-container app-width">
-        <instructions-block
-          type="Mail OSX"
-          :content="instructions.mail"/>
-        <instructions-block
-          type="Outlook"
-          :content="instructions.outlook"/>
-        <instructions-block
-          type="Gmail"
-          :content="instructions.gmail"/>
-        <instructions-block
-          type="iOS"
-          :content="instructions.ios"/>
-      </div>
-    </section>
-    <section class="m-t-48">
       <title-component
         class="app-width"
         title="Crea tu firma"
-        tag="h2"/>
+        tag="h1"/>
       <div
         class="app-container app-width">
         <signature-generator @signatureChange="updateSignature"/>
@@ -47,6 +23,23 @@
           elementToCopy="#signature"/>
       </header>
       <signature-prerender :person="person"/>
+    </section>
+    <section
+      class="m-t-48">
+      <title-component
+        class="app-width preview-header"
+        title="Instrucciones"/>
+      <div class="app-container app-width">
+        <instructions-block
+          type="Mail OSX"
+          :content="instructions.mail"/>
+        <instructions-block
+          type="Outlook"
+          :content="instructions.outlook"/>
+        <instructions-block
+          type="Gmail"
+          :content="instructions.gmail"/>
+      </div>
     </section>
   </div>
 </template>
@@ -95,8 +88,7 @@ export default {
   #app {
     background: $--color-grey;
     min-height: 100vh;
-    padding: 0 48px 48px;
-    box-sizing: border-box;
+    padding-bottom: 48px;
   }
   .app-width {
     width: 800px;
@@ -112,13 +104,5 @@ export default {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-  }
-  #main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /deep/ h1 {
-      font-size: 16px;
-    }
   }
 </style>

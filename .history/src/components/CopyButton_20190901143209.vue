@@ -54,13 +54,15 @@ export default {
     transition: all .2s;
     font-weight: 600;
     &:hover {
-      color: $--color-white;
-      background: $--color-info;
+      color: $--color-info;
+      background: $--color-white;
     }
     &.active {
-      color: $--color-white;
       border-color: $--color-success;
       background: $--color-success;
+      &:hover {
+        color: $--color-white;
+      }
     }
   }
 </style>

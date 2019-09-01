@@ -40,7 +40,7 @@ export default {
       type: String
     },
     content: {
-      type: Object,
+      type: Array,
       required: true
     }
   },

@@ -45,22 +45,21 @@ export default {
     position: relative;
     text-transform: uppercase;
     font-size: 12px;
-    color: $--color-info;
-    background: $--color-white;
-    border: 1px solid $--color-info;
-    padding: 8px 20px;
+    color: $--color-white;
+    background: $--color-success;
+    border: 1px solid $--color-success;
+    padding: 6px 12px;
     border-radius: 4px;
     cursor: pointer;
     transition: all .2s;
     font-weight: 600;
     &:hover {
-      color: $--color-white;
-      background: $--color-info;
+      border-color: $--color-success;
     }
     &.active {
-      color: $--color-white;
       border-color: $--color-success;
       background: $--color-success;
+      color: white;
     }
   }
 </style>

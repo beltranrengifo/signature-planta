@@ -13,15 +13,9 @@
     <ol class="instructions__list">
       <li
         class="instructions__item"
-        v-for="item in content.content"
-        :key="item"
-        v-html="item">
-      </li>
-      <li
-        class="instructions__item"
-        v-for="image in content.images"
-        :key="image">
-        <img :src="require(`@/assets/images/${image}`)" alt="image">
+        v-for="item in content"
+        :key="item">
+        {{ item }}
       </li>
     </ol>
   </div>
@@ -40,7 +34,7 @@ export default {
       type: String
     },
     content: {
-      type: Object,
+      type: Array,
       required: true
     }
   },

@@ -24,7 +24,7 @@ export default {
 
 <style lang="scss" scoped>
   .logo {
-    padding: 24px 0 0;
+    padding: 24px 0;
     img {
       max-width: 180px;
     }

@@ -70,15 +70,4 @@ export default {
   display: flex;
   justify-content: center;
 }
-.no-signature {
-  font-family: $--font-serif;
-  font-style: italic;
-  align-self: center;
-  h4 {
-    font-weight: 100;
-    font-size: 14px;
-    letter-spacing: .5px;
-    color: $--color-grey-dark;
-  }
-}
 </style>

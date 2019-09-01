@@ -13,15 +13,9 @@
     <ol class="instructions__list">
       <li
         class="instructions__item"
-        v-for="item in content.content"
-        :key="item"
-        v-html="item">
-      </li>
-      <li
-        class="instructions__item"
-        v-for="image in content.images"
-        :key="image">
-        <img :src="require(`@/assets/images/${image}`)" alt="image">
+        v-for="item in content"
+        :key="item">
+        {{ item }}
       </li>
     </ol>
   </div>
@@ -40,7 +34,7 @@ export default {
       type: String
     },
     content: {
-      type: Object,
+      type: Array,
       required: true
     }
   },
@@ -64,7 +58,6 @@ export default {
       padding-left: 16px;
       cursor: pointer;
       transition: color .2s;
-      margin-bottom: 4px;
       &:hover {
         color: black;
       }
@@ -82,7 +75,6 @@ export default {
       &.is-folded {
         ol {
           height: 0;
-          margin: 0;
         }
       }
       &:not(.is-folded) {
@@ -91,7 +83,7 @@ export default {
         }
       }
       &:last-child {
-        padding-bottom: 32px;
+        padding-bottom: 24px;
       }
     }
   }
