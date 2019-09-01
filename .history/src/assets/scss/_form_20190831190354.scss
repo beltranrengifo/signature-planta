@@ -1,0 +1,59 @@
+.input,
+.select {
+  min-height: $--input-height;
+}
+.select {
+  min-height: $--input-height + 4;
+}
+.input {
+  padding: 4px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid $--color-grey-medium;
+  font-size: 16px;
+  font-family: $--font-serif;
+  &:focus {
+    outline: none;
+  }
+}
+
+.label {
+  text-transform: uppercase;
+  color: $--color-grey-dark;
+  font-size: 10px;
+  font-family: $--font-sans;
+  font-weight: 600;
+}
+.select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  @extend .input;
+  border-radius: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.label + .input {
+  margin-top: 8px;
+}
+
+.is-select {
+  position: relative;
+  &:after {
+    pointer-events: none;
+    position: absolute;
+    right: 12px;
+    bottom: 22px;
+    font-size: 14px;
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 400;
+    content: "\f0d7";
+    color: $--color-grey-dark;
+    transition: color .2s;
+  }
+  &:hover {
+    &:after {
+      color: #aeaeae;
+    }
+  }
+}

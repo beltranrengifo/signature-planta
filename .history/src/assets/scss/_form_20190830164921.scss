@@ -1,0 +1,8 @@
+input {
+  min-height: 40px;
+  border: none;
+  border-bottom: 2px solid $--color-grey-medium;
+  &:focus {
+    outline: none;
+  }
+}
