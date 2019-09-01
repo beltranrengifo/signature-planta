@@ -12,8 +12,8 @@
                 <td style="width:10px;"></td>
                 <td style="vertical-align:top;">
                     <p style="-webkit-margin-before:0;-webkit-margin-after:0;font-family:Lucida Sans, Arial, sans-serif;font-size:14px;color:#473741;letter-spacing:1px;margin: 12px 0 0 0;"><strong>{{ person.name }}</strong></p>
-                    <p style="-webkit-margin-before:0;-webkit-margin-after:0;font-family:Lucida Sans, Arial, sans-serif;font-size:14px;color:#473741;letter-spacing:1px;margin:0;">{{ person.role }}</p>
-                    <a href="mailto:person.email" style="text-decoration:none;word-break:keep-all;">
+                    <p v-if="person.role" style="-webkit-margin-before:0;-webkit-margin-after:0;font-family:Lucida Sans, Arial, sans-serif;font-size:14px;color:#473741;letter-spacing:1px;margin:0;">{{ person.role }}</p>
+                    <a v-if="person.email" :href="`mailto:${person.email}`" style="text-decoration:none;word-break:keep-all;">
                         <p style="-webkit-margin-before:0;-webkit-margin-after:0;font-family:Lucida Sans, Arial, sans-serif;font-size:12px;color:#473741;letter-spacing:1px;margin:0;word-break:keep-all;white-space:nowrap;">{{ person.email}}</p>
                     </a>
                     <a href="https://grupolamusa.com" style="text-decoration:none;">
