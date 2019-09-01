@@ -71,6 +71,10 @@ export default {
     }
     &__list {
       overflow: hidden;
+      height: auto;
+      max-height: 600px;
+      transition: max-height .4s;
+      margin: 0;
     }
     &__item {
       line-height: 1.75;
@@ -81,8 +85,7 @@ export default {
       box-sizing: border-box;
       &.is-folded {
         ol {
-          height: 0;
-          margin: 0;
+          max-height: 0;
         }
       }
       &:not(.is-folded) {

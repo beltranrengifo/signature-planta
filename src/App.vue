@@ -17,14 +17,14 @@
           type="Mail OSX"
           :content="instructions.mail"/>
         <instructions-block
+          type="Mail iOS"
+          :content="instructions.ios"/>
+        <instructions-block
           type="Outlook"
           :content="instructions.outlook"/>
         <instructions-block
           type="Gmail"
           :content="instructions.gmail"/>
-        <instructions-block
-          type="iOS"
-          :content="instructions.ios"/>
       </div>
     </section>
     <section class="m-t-48">
