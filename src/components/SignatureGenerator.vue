@@ -13,7 +13,7 @@
         name="name"
         v-model="signature.name">
     </div>
-    <div class="form__item">
+    <!-- <div class="form__item">
       <label
         class="label"
         for="role">
@@ -25,7 +25,7 @@
         id="role"
         name="role"
         v-model="signature.role">
-    </div>
+    </div> -->
     <div class="form__item">
       <label
         class="label"
@@ -56,14 +56,14 @@
       <label
         class="label"
         for="facebook">
-        Facebook URL
+        Web URL
       </label>
       <input
         class="input"
         type="url"
-        id="facebook"
-        name="facebook"
-        v-model="signature.facebook">
+        id="web"
+        name="web"
+        v-model="signature.web">
     </div>
     <div class="form__item">
       <label
@@ -78,7 +78,7 @@
         name="instagram"
         v-model="signature.instagram">
     </div>
-    <div class="form__item">
+    <!-- <div class="form__item">
       <label
         class="label"
         for="twitter">
@@ -90,8 +90,8 @@
         id="twitter"
         name="twitter"
         v-model="signature.twitter">
-    </div>
-    <div class="form__item is-select required">
+    </div> -->
+    <!-- <div class="form__item is-select required">
       <label
         class="label"
         for="company">
@@ -107,8 +107,8 @@
           v-for="option in companies"
           :key="option">{{ option }}</option>
       </select>
-    </div>
-    <div
+    </div> -->
+    <!-- <div
       v-if="signature.company === 'Otra'"
       class="form__item required">
       <label
@@ -122,7 +122,7 @@
         id="other"
         name="other"
         v-model="signature.other">
-    </div>
+    </div> -->
     <div class="form__item">
       <label
         class="label"
@@ -142,26 +142,16 @@ export default {
     return {
       signature: {
         name: '',
-        role: '',
+        // role: '',
         email: '',
         phone: '',
-        facebook: '',
+        web: '',
         instagram: '',
-        twitter: '',
-        company: '',
-        other: '',
+        // twitter: '',
+        // company: '',
+        // other: '',
         image: true
-      },
-      companies: [
-        'BERODE RESTAURACIÓN, S.L.',
-        'BUENALSANTA, S.L.',
-        'DESCATALOGADO, S.L.',
-        'MUSA LATINA, S.L.',
-        'MUSA MALASAÑA, S.L.',
-        'PALEO ESPELTO, S.L.',
-        'SPIEDO GRILL, S.L.',
-        'Otra'
-      ]
+      }
     }
   },
   watch: {

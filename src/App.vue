@@ -6,6 +6,7 @@
        alt="Grupo La Musa"/>
        <title-component
         title="Generador de firmas"
+        subtitle="Planta Paisajistas"
         tag="h1"/>
     </header>
     <section>
@@ -80,7 +81,7 @@ export default {
   },
   computed: {
     logo () {
-      return require('@/assets/images/logo-grupo-musa-364_v2-1.png')
+      return require('@/assets/images/planta-paisajistas-logo-alpha.png')
     }
   },
   methods: {
@@ -116,7 +117,7 @@ export default {
   #main-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     /deep/ h1 {
       font-size: 16px;
     }

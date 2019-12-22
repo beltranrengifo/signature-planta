@@ -26,7 +26,7 @@ export default {
   .logo {
     padding: 24px 0 0;
     img {
-      max-width: 180px;
+      max-width: 100px;
     }
   }
 </style>

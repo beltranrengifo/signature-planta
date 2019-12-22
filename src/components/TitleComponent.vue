@@ -28,6 +28,7 @@ export default {
 
 <style lang="scss" scoped>
   .app-title {
+    padding: 24px 0 0;
     &__title {
       font-size: 24px;
       font-family: $--font-serif;
