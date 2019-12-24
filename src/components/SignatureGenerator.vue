@@ -69,14 +69,11 @@
       <label
         class="label"
         for="instagram">
-        Instagram URL
+        Mostrar enlace a Instagram
       </label>
-      <input
-        class="input"
-        type="url"
-        id="instagram"
-        name="instagram"
-        v-model="signature.instagram">
+      <toggle-button
+        v-model="signature.useInstagram"
+        @change="signature.useInstagram = !signature.useInstagram"/>
     </div>
     <!-- <div class="form__item">
       <label
@@ -145,8 +142,9 @@ export default {
         // role: '',
         email: '',
         phone: '',
-        web: '',
-        instagram: '',
+        web: 'plantapaisajistas.com',
+        instagram: 'https://www.instagram.com/plantapaisajistas/',
+        useInstagram: true,
         // twitter: '',
         // company: '',
         // other: '',

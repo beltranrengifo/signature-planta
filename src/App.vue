@@ -44,7 +44,7 @@
         <title-component
           title="Vista previa"/>
         <copy-button
-          :class="{disabled: !person.name || !person.company}"
+          :class="{ disabled: !person.name }"
           elementToCopy="#signature"/>
       </header>
       <signature-prerender :person="person"/>
