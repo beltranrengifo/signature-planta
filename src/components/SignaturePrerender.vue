@@ -26,7 +26,7 @@
             v-if="person.image"
             style="width:25px;" />
           <td style="vertical-align:bottom;">
-            <p style="text-transform:capitalize;-webkit-margin-before:0;-webkit-margin-after:0;font-family:Helvetica, Arial, sans-serif;font-size:14px;color:#716258;letter-spacing:1;margin: 12px 0 8px 0;">
+            <p style="-webkit-margin-before:0;-webkit-margin-after:0;font-family:Helvetica, Arial, sans-serif;font-size:14px;color:#716258;letter-spacing:1;margin: 12px 0 8px 0;">
               <strong>{{ person.name }}</strong></p>
             <a
               :href="mailLink"
@@ -100,7 +100,7 @@ export default {
   },
   computed: {
     mailLink () {
-      return `mailto:${this.person.mail}`
+      return `mailto:${this.person.email}`
     },
     phoneLink () {
       return `tel:${this.person.phone}`
