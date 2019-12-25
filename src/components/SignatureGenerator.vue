@@ -13,19 +13,6 @@
         name="name"
         v-model="signature.name">
     </div>
-    <!-- <div class="form__item">
-      <label
-        class="label"
-        for="role">
-        Rol
-      </label>
-      <input
-        class="input"
-        type="text"
-        id="role"
-        name="role"
-        v-model="signature.role">
-    </div> -->
     <div class="form__item">
       <label
         class="label"
@@ -72,54 +59,9 @@
         Mostrar enlace a Instagram
       </label>
       <toggle-button
-        v-model="signature.useInstagram"
+        :value="true"
         @change="signature.useInstagram = !signature.useInstagram"/>
     </div>
-    <!-- <div class="form__item">
-      <label
-        class="label"
-        for="twitter">
-        Twitter URL
-      </label>
-      <input
-        class="input"
-        type="url"
-        id="twitter"
-        name="twitter"
-        v-model="signature.twitter">
-    </div> -->
-    <!-- <div class="form__item is-select required">
-      <label
-        class="label"
-        for="company">
-        Empresa
-      </label>
-      <select
-        class="select"
-        type="text"
-        id="company"
-        name="company"
-        v-model="signature.company">
-        <option
-          v-for="option in companies"
-          :key="option">{{ option }}</option>
-      </select>
-    </div> -->
-    <!-- <div
-      v-if="signature.company === 'Otra'"
-      class="form__item required">
-      <label
-        class="label"
-        for="other">
-        Otra empresa
-      </label>
-      <input
-        class="input"
-        type="text"
-        id="other"
-        name="other"
-        v-model="signature.other">
-    </div> -->
     <div class="form__item">
       <label
         class="label"
@@ -139,15 +81,11 @@ export default {
     return {
       signature: {
         name: '',
-        // role: '',
         email: '',
         phone: '',
-        web: 'plantapaisajistas.com',
-        instagram: 'https://www.instagram.com/plantapaisajistas/',
+        web: process.env.VUE_APP_WEB_URL,
+        instagram: process.env.VUE_APP_INSTAGRAM_URL,
         useInstagram: true,
-        // twitter: '',
-        // company: '',
-        // other: '',
         image: true
       }
     }
